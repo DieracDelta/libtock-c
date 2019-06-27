@@ -5,8 +5,8 @@
  */
 
 /* Memory Spaces Definitions, 448K flash, 64K ram */
-PROG_LENGTH = 0x00040000;
-RAM_LENGTH  = 0x00010000;
+PROG_LENGTH = 0x50000;
+RAM_LENGTH  = 16K;
 
 ENTRY(_start)
 
@@ -15,7 +15,7 @@ ENTRY(_start)
  * actual location in flash where the app is placed.
  */
 MEMORY {
-    FLASH (rx) : ORIGIN = 0x4043002c, LENGTH = PROG_LENGTH
+    FLASH (rx) : ORIGIN = 0x4045002c, LENGTH = PROG_LENGTH
     SRAM (RWX) : ORIGIN = 0x80004000, LENGTH = RAM_LENGTH
 }
 
